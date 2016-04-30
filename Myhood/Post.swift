@@ -32,7 +32,7 @@ class Post {
         self._imagePath = imagePath
         self._title = title
         self._postdesc = description
-    }
+    } //
     
     
 }

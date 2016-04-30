@@ -16,6 +16,9 @@
 		AC04AA881CD4F087005994DA /* MyhoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04AA871CD4F087005994DA /* MyhoodUITests.swift */; };
 		AC04AA971CD4F29C005994DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC04AA961CD4F29C005994DA /* Post.swift */; };
 		ACE7C3C41CD507A900D08F3F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7C3C31CD507A900D08F3F /* PostCell.swift */; };
+		ACE7C3C71CD5196800D08F3F /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7C3C61CD5196800D08F3F /* AddPostVC.swift */; };
+		ACE7C3C81CD51B1D00D08F3F /* prestigeelitebold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE7C3C11CD4FEB000D08F3F /* prestigeelitebold.ttf */; };
+		ACE7C3CA1CD51EA300D08F3F /* prestige.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACE7C3C91CD51EA300D08F3F /* prestige.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 		AC04AA961CD4F29C005994DA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ACE7C3C11CD4FEB000D08F3F /* prestigeelitebold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = prestigeelitebold.ttf; sourceTree = "<group>"; };
 		ACE7C3C31CD507A900D08F3F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		ACE7C3C61CD5196800D08F3F /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		ACE7C3C91CD51EA300D08F3F /* prestige.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = prestige.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +107,13 @@
 		AC04AA661CD4F086005994DA /* Myhood */ = {
 			isa = PBXGroup;
 			children = (
+				ACE7C3C51CD5192B00D08F3F /* Controller */,
 				ACE7C3C21CD5078800D08F3F /* View */,
 				AC04AA951CD4F28D005994DA /* Model */,
 				AC04AA671CD4F086005994DA /* AppDelegate.swift */,
-				AC04AA691CD4F086005994DA /* ViewController.swift */,
-				AC04AA6B1CD4F086005994DA /* Main.storyboard */,
 				AC04AA6E1CD4F086005994DA /* Assets.xcassets */,
-				AC04AA701CD4F086005994DA /* LaunchScreen.storyboard */,
 				AC04AA731CD4F086005994DA /* Info.plist */,
+				ACE7C3C91CD51EA300D08F3F /* prestige.ttf */,
 				ACE7C3C11CD4FEB000D08F3F /* prestigeelitebold.ttf */,
 			);
 			path = Myhood;
@@ -144,9 +148,20 @@
 		ACE7C3C21CD5078800D08F3F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC04AA701CD4F086005994DA /* LaunchScreen.storyboard */,
+				AC04AA6B1CD4F086005994DA /* Main.storyboard */,
 				ACE7C3C31CD507A900D08F3F /* PostCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		ACE7C3C51CD5192B00D08F3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC04AA691CD4F086005994DA /* ViewController.swift */,
+				ACE7C3C61CD5196800D08F3F /* AddPostVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +268,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE7C3C81CD51B1D00D08F3F /* prestigeelitebold.ttf in Resources */,
 				AC04AA721CD4F086005994DA /* LaunchScreen.storyboard in Resources */,
+				ACE7C3CA1CD51EA300D08F3F /* prestige.ttf in Resources */,
 				AC04AA6F1CD4F086005994DA /* Assets.xcassets in Resources */,
 				AC04AA6D1CD4F086005994DA /* Main.storyboard in Resources */,
 			);
@@ -282,6 +299,7 @@
 			files = (
 				AC04AA971CD4F29C005994DA /* Post.swift in Sources */,
 				AC04AA6A1CD4F086005994DA /* ViewController.swift in Sources */,
+				ACE7C3C71CD5196800D08F3F /* AddPostVC.swift in Sources */,
 				AC04AA681CD4F086005994DA /* AppDelegate.swift in Sources */,
 				ACE7C3C41CD507A900D08F3F /* PostCell.swift in Sources */,
 			);

@@ -17,6 +17,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
+        
+        var post1 = Post(imagePath: "", title: "Ouai", description: "J'ai payé le premier cours sur firebase pour rien je viens de m'apercevoir qu'il y en aviat un autre trop bien ....")
+        var post2 = Post(imagePath: "", title: "Ouai", description: "J'ai payé le premier cours sur firebase pour rien je viens de m'apercevoir qu'il y en aviat un autre trop bien ....")
+        var post3 = Post(imagePath: "", title: "Ouai", description: "J'ai payé le premier cours sur firebase pour rien je viens de m'apercevoir qu'il y en aviat un autre trop bien ....")
+        
+        
+        posts.append(post1)
+        posts.append(post2)
+        posts.append(post3)
+        
+        tableView.reloadData()
     }
     
     

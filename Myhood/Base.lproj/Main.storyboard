@@ -28,49 +28,49 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3N-GD-2vv">
-                                        <rect key="frame" x="539" y="21" width="53" height="41"/>
+                                        <rect key="frame" x="557" y="34" width="35" height="28"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="53" id="JJq-Fs-QtD"/>
-                                            <constraint firstAttribute="height" constant="41" id="gtM-Tk-D0n"/>
+                                            <constraint firstAttribute="width" constant="35" id="JJq-Fs-QtD"/>
+                                            <constraint firstAttribute="height" constant="28" id="gtM-Tk-D0n"/>
                                         </constraints>
                                         <state key="normal" image="camera"/>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Titre" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-LW-PcG">
-                                        <rect key="frame" x="200" y="6" width="200" height="50"/>
+                                        <rect key="frame" x="220" y="20" width="160" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="LoJ-2q-bDh"/>
-                                            <constraint firstAttribute="height" constant="50" id="y4n-JQ-0qn"/>
+                                            <constraint firstAttribute="width" constant="160" id="LoJ-2q-bDh"/>
+                                            <constraint firstAttribute="height" constant="40" id="y4n-JQ-0qn"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53866522894934576" green="0.56776252864921639" blue="0.63888661649214662" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="q3N-GD-2vv" secondAttribute="trailing" constant="8" id="3hX-8r-iMh"/>
-                                    <constraint firstItem="hyk-LW-PcG" firstAttribute="top" secondItem="0IC-RL-77a" secondAttribute="top" constant="6" id="CGB-Zt-qrR"/>
+                                    <constraint firstItem="hyk-LW-PcG" firstAttribute="top" secondItem="0IC-RL-77a" secondAttribute="top" constant="20" id="CGB-Zt-qrR"/>
                                     <constraint firstAttribute="height" constant="70" id="Q5r-rv-u3U"/>
                                     <constraint firstItem="hyk-LW-PcG" firstAttribute="centerX" secondItem="0IC-RL-77a" secondAttribute="centerX" id="eBj-jB-hFI"/>
                                     <constraint firstAttribute="bottom" secondItem="q3N-GD-2vv" secondAttribute="bottom" constant="8" id="ecC-xJ-Hhf"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-5u-raa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-5u-raa">
                                 <rect key="frame" x="20" y="90" width="560" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="Zjy-EH-b0e">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="90" id="Zjy-EH-b0e" customClass="PostCell" customModule="Myhood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zjy-EH-b0e" id="9Br-Gn-FE9">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Zjy-EH-b0e" id="9Br-Gn-FE9">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-0X-Ov5">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Button" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-0X-Ov5">
                                                     <rect key="frame" x="10" y="10" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="X3t-6V-B12"/>
                                                         <constraint firstAttribute="width" constant="70" id="kdM-Ch-HnY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-nh-0F1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Titre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-nh-0F1">
                                                     <rect key="frame" x="90" y="10" width="460" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="CK5-dv-WQ3"/>
@@ -79,7 +79,7 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wli-FE-FPr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wli-FE-FPr">
                                                     <rect key="frame" x="90" y="38" width="460" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="b9x-xD-GnY"/>
@@ -102,6 +102,11 @@
                                                 <constraint firstItem="wli-FE-FPr" firstAttribute="top" secondItem="iXf-nh-0F1" secondAttribute="bottom" constant="5" id="xzb-Y6-pNm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postDescLbl" destination="wli-FE-FPr" id="nSf-aJ-wwu"/>
+                                            <outlet property="postImg" destination="TnP-0X-Ov5" id="OU1-ct-dxD"/>
+                                            <outlet property="postTitleLbl" destination="iXf-nh-0F1" id="H1B-he-GSC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

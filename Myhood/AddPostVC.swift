@@ -15,7 +15,8 @@ class AddPostVC: UIViewController {
     @IBOutlet weak var descField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-// Do any additional setup after loading the view.
+        postImg.layer.cornerRadius = postImg.frame.size.width / 2
+        postImg.clipsToBounds = true
     }
 
     @IBAction func addPicBtnPressed(sender: UIButton!) {
@@ -24,6 +25,18 @@ class AddPostVC: UIViewController {
     }
     @IBAction func savePostBtnPressed(sender: AnyObject) {
     }
-    @IBOutlet weak var cancelBtnPressed: UIButton!
+
+
+
+    @IBAction func cancelBtnPressed(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+
+
+
+
+
+
 
 }

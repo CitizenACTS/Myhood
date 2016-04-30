@@ -91,7 +91,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Button" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-0X-Ov5">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-0X-Ov5">
                                                     <rect key="frame" x="10" y="10" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="X3t-6V-B12"/>
@@ -248,6 +248,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelBtnPressed:" destination="2N1-wp-6Zq" eventType="touchUpInside" id="y1A-3x-kBV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.062745098039215685" green="0.070588235294117646" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,7 +282,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cancelBtnPressed" destination="h9k-RR-GT6" id="0DN-Xz-zp9"/>
                         <outlet property="descField" destination="5IR-G9-tCl" id="0Lq-sA-6RI"/>
                         <outlet property="postImg" destination="dDh-SU-a8W" id="Qjz-uu-MpR"/>
                         <outlet property="titleField" destination="isV-26-75J" id="Hh9-YL-dKu"/>
@@ -291,7 +293,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="192" height="192"/>
         <image name="back" width="640" height="960"/>
         <image name="camera" width="100" height="77"/>
     </resources>

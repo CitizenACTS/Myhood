@@ -26,8 +26,13 @@ class DataService {
     
     func loadPosts() {
         if let postData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_POSTS) as? NSData {
-            
+            if let postArray = NSKeyedUnarchiver.unarchiveObjectWithData(postData) as? [Post] {
+                _loadedPosts = postArray
+                
+            }
         }
+        
+        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "postLoaded", object: nil))
     }
     
     func saveImageAndCreatePath(image: UIImage) {

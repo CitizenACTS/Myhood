@@ -18,15 +18,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         
         
-        var post1 = Post(imagePath: "", title: "Ouai", description: "J'ai payé le premier cours sur firebase pour rien je viens de m'apercevoir qu'il y en aviat un autre trop bien ....")
-        var post2 = Post(imagePath: "", title: "Ouai", description: "J'ai payé le premier cours sur firebase pour rien je viens de m'apercevoir qu'il y en aviat un autre trop bien ....")
-        var post3 = Post(imagePath: "", title: "Ouai", description: "J'ai payé le premier cours sur firebase pour rien je viens de m'apercevoir qu'il y en aviat un autre trop bien ....")
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onPostLoaded:", name: "postLoaded", object: nil)
         
         
-        posts.append(post1)
-        posts.append(post2)
-        posts.append(post3)
-        
+        tableView.layer.cornerRadius = 5.0
         tableView.reloadData()
     }
     
@@ -36,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.configureCell(post)
             return cell
@@ -55,9 +51,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     }
     
+    func onPostLoaded(notif: AnyObject) {
+        tableView.reloadData()
+    }
 
 }
 
